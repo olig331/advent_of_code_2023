@@ -19,8 +19,7 @@ fn part_1(input: &String) -> u32 {
 
     input
         .lines()
-        .map(|x| x.split(":").nth(1).unwrap().to_string())
-        .into_iter()
+        .map(|x| x.split(":").nth(1).unwrap())
         .enumerate()
         .for_each(|(i, game)| {
             let mut passed = true;
@@ -52,8 +51,7 @@ fn part_2(input: &String) -> u32 {
 
     input
         .lines()
-        .map(|x| x.split(":").nth(1).unwrap().to_string())
-        .into_iter()
+        .map(|x| x.split(":").nth(1).unwrap())
         .for_each(|game| {
             let mut game_res = GameParams { r: 0, g: 0, b: 0 };
             game.split(";").for_each(|bag| {
