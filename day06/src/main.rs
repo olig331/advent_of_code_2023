@@ -1,7 +1,7 @@
 use std::fs;
 
 fn main() {
-    let input: Vec<Vec<u32>> = fs::read_to_string("./test_input.txt")
+    let input: Vec<Vec<u32>> = fs::read_to_string("./input.txt")
         .expect("")
         .lines()
         .map(|l| {
@@ -37,7 +37,7 @@ fn main() {
         }
     }
 
-    print!("{}", result.iter().fold(1, |acc, &x| acc * x));
+    println!("Part 1 - {}", result.iter().fold(1, |acc, &x| acc * x));
 
     part_2()
 }
@@ -57,5 +57,5 @@ fn part_2() {
             race_res += 1;
         }
     }
-    println!("\nPart 2 - {}", race_res);
+    println!("Part 2 - {}", race_res);
 }
