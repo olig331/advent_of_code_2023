@@ -42,7 +42,7 @@ fn main() {
     part_2();
 }
 
-fn part_2() -> u64 {
+fn part_2() {
     let (t, d) = (54946592, 302147610291404 as u64);
     let mut race_res: u64 = 0;
 
