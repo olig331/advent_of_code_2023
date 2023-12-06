@@ -39,21 +39,15 @@ fn main() {
 
     println!("Part 1 - {}", result.iter().fold(1, |acc, &x| acc * x));
 
-    part_2()
+    part_2();
 }
 
-fn part_2() {
-    let (time, distance) = (54946592, 302147610291404 as u64);
+fn part_2() -> u64 {
+    let (t, d) = (54946592, 302147610291404 as u64);
     let mut race_res: u64 = 0;
 
-    let d = distance;
-    let t = time;
-
     for j in 0..=t {
-        let tr = t - j;
-
-        let dc = j * tr;
-        if dc > d {
+        if j * (t - j) > d {
             race_res += 1;
         }
     }
